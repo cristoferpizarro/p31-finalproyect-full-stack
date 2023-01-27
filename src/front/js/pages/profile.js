@@ -1,10 +1,14 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+
 import UserProfileCard from "../component/UserProfileCard";
 import profileInfoForm from "../component/profileInfoForm";
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+
+=======
+import { FaSun } from 'react-icons/fa';
 
 import { Context } from "../store/appContext";
 
@@ -24,6 +28,7 @@ const info = {
 export const Profile = () => {
 	const { store, actions } = useContext(Context);
 
+
 	return (
 		<Container>
 			<Row>
@@ -35,6 +40,19 @@ export const Profile = () => {
 				</Col>
 			</Row>
 		</Container>
+=======
+	useEffect(() => {
+		if(store.token && store.token != "" && store.token != undefined) actions.getMessage();
+	}, [store.token])
+
+	return (
+		<Container>
+		<div style={{textAlign: 'end'}}>
+			<div style={{color: 'green', fontWeight: 'bold'}}>{store.message}</div>	
+		</div>
+			<div>probando Profile...</div>
+		</Container>
+
 	);
 };
 
