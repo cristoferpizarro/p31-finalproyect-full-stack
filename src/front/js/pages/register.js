@@ -7,9 +7,13 @@ import { Container } from "react-bootstrap";
 export const Register = () => {
 	const { store, actions } = useContext(Context);
 
+	const [user, setUser] = React.useState({
+		email: "",
+		password: "",
+	  });
+
 	return (
 		<div>
-			Probando Register...
 		</div>
 	);
 };

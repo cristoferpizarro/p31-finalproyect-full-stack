@@ -51,7 +51,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 
 				try {
 
-					const response = await fetch('https://3001-faldea1-p31finalproyect-oudkkrtp38y.ws-us84.gitpod.io/api/token', options)
+					const response = await fetch('https://3001-cristoferpi-p31finalpro-yso9tspmq65.ws-us84.gitpod.io/api/token', options)
 					if(response.status !== 200){
 	
 						alert("There has been an error");
